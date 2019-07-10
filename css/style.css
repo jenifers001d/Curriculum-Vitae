@@ -1,0 +1,191 @@
+* {
+    /*   border: solid 1px black; */
+}
+
+body {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #1d2d62;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    font-family: "微軟正黑體", sans-serif;
+}
+
+/* 複寫區 */
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+h2 {
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+h2::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 8px;
+    background-color: #FF7168;
+    margin-left: 10px;
+}
+
+h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h4 {
+    margin: 0;
+    margin-top: 40px;
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+hr {
+    border: none;
+    border-bottom: solid 4px #FF7168;
+    width: 40%;
+    margin-left: 0;
+}
+
+.container {
+    width: 950px;
+    min-width: 650px;
+    border: solid 8px white;
+    padding: 50px;
+    position: relative;
+}
+
+.decoration {
+    width: 300px;
+    height: 140px;
+    background: linear-gradient(135deg, #FF5F5F, #FFFFAE);
+    border-radius: 70px 0px 0px 70px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+
+.block .skill {
+    display: flex;
+    justify-content: space-around
+}
+
+.skill h3 {
+    position: relative;
+    left: -30px;
+}
+
+.listProgram li,
+.listLanguage li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+/* list skills */
+.bar {
+    width: 150px;
+    height: 10px;
+    border: solid 2px #FF7168;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.value {
+    height: 100%;
+    width: 60%;
+    background-color: #FF7168;
+}
+
+.value.p10 {
+    width: 10%;
+}
+
+.value.p20 {
+    width: 20%;
+}
+
+.value.p30 {
+    width: 30%;
+}
+
+.value.p40 {
+    width: 40%;
+}
+
+.value.p50 {
+    width: 50%;
+}
+
+.value.p60 {
+    width: 60%;
+}
+
+.value.p70 {
+    width: 70%;
+}
+
+.value.p80 {
+    width: 80%;
+}
+
+.value.p90 {
+    width: 90%;
+}
+
+.value.p100 {
+    width: 100%;
+}
+
+.listEducation,
+.listExperience {
+    margin-bottom: 40px;
+}
+
+li.year {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+li.year .year {
+    flex: 0 0 auto;
+    width: 40px;
+}
+
+li.year ul {
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+li.year > ul {
+    border-left: solid 4px white;
+}
+
+li.year:nth-child(1) ul {
+    border-color: #FF7168
+}
+
+li.year:nth-child(2) ul {
+    border-color: #ff8880
+}
+
+li.year:nth-child(3) ul {
+    border-color: #ffa099
+}
+
+li.year:nth-child(4) ul {
+    border-color: #ffb8b3
+}
+
+.italic {
+    font-style: italic;
+}
