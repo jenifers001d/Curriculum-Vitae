@@ -146,9 +146,32 @@ hr {
     width: 100%;
 }
 
+.listWorks,
 .listEducation,
 .listExperience {
     margin-bottom: 40px;
+}
+
+.listWorks {
+    display: flex;
+}
+
+.listWorks li {
+    margin: 0px 15px;
+}
+
+.listWorks a {
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+}
+
+/*a:hover 需放置在 a:link 跟 a:visited 之後，則 a:active 放置在 a:hover 之後*/
+.listWorks a:visited {
+    color: #ffb8b3;
+}
+
+.listWorks a:hover {
+    color: #FF7168;
 }
 
 li.year {
