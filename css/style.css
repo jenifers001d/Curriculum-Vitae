@@ -154,10 +154,11 @@ hr {
 
 .listWorks {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .listWorks li {
-    margin: 0px 15px;
+    margin: 10px 15px;
 }
 
 .listWorks a {
@@ -189,7 +190,7 @@ li.year ul {
     margin-left: 10px;
 }
 
-li.year > ul {
+li.year>ul {
     border-left: solid 4px white;
 }
 
@@ -211,4 +212,5 @@ li.year:nth-child(4) ul {
 
 .italic {
     font-style: italic;
+
 }
