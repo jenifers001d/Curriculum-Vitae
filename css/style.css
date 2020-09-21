@@ -22,8 +22,8 @@ ul {
 
 h2 {
     margin: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     font-weight: 400;
 }
 
@@ -83,12 +83,18 @@ hr {
     left: -30px;
 }
 
+.listLanguage,
+.listProgram {
+    margin-top: 0;
+    /*    margin-bottom: 0;*/
+}
+
 .listProgram li,
 .listLanguage li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
+    padding-top: 3px;
 }
 
 /* list skills */
@@ -146,6 +152,11 @@ hr {
     width: 100%;
 }
 
+/*
+.listWorks {
+    margin-bottom: 20px;
+}
+*/
 .listWorks,
 .listEducation,
 .listExperience {
@@ -158,20 +169,23 @@ hr {
 }
 
 .listWorks li {
-    margin: 10px 15px;
+    margin: 3px 15px;
 }
 
-.listWorks a {
+.listWorks a,
+#myGitHub {
     color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
 }
 
 /*a:hover 需放置在 a:link 跟 a:visited 之後，則 a:active 放置在 a:hover 之後*/
-.listWorks a:visited {
+.listWorks a:visited,
+#myGitHub:visited {
     color: #ffb8b3;
 }
 
-.listWorks a:hover {
+.listWorks a:hover,
+#myGitHub:hover {
     color: #FF7168;
 }
 
@@ -190,7 +204,7 @@ li.year ul {
     margin-left: 10px;
 }
 
-li.year>ul {
+li.year > ul {
     border-left: solid 4px white;
 }
 
@@ -208,6 +222,14 @@ li.year:nth-child(3) ul {
 
 li.year:nth-child(4) ul {
     border-color: #ffb8b3
+}
+
+li.year:nth-child(5) ul {
+    border-color: #ffcfcc
+}
+
+li.year:nth-child(6) ul {
+    border-color: #ffe7e5
 }
 
 .italic {
