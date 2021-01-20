@@ -444,3 +444,32 @@ li.year:nth-child(6) ul {
         border-radius: 6px;
     }
 }
+
+@media screen and (max-width: 490px) {
+    .switch {
+        top: -3px;
+        right: -38%;
+    }
+
+    .block .skill {
+        display: block;
+        width: 90%;
+        margin-left: 5%;
+        /*    justify-content: space-around*/
+    }
+
+    .skill h3 {
+        position: relative;
+        left: -10px;
+    }
+
+    .block .skill ul {
+        width: 100%;
+    }
+
+    .bar {
+        min-width: 70px;
+        height: 13px;
+        border-radius: 6px;
+    }
+}
