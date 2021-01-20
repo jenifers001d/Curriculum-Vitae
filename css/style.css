@@ -109,7 +109,7 @@ h2::after {
 }
 
 h2.light::after {
-    background-color: #db57d2;
+    background-color: #9f6b38;
 }
 
 h2.black::after {
@@ -130,7 +130,7 @@ h4 {
 
 hr {
     border: none;
-    border-bottom: solid 4px #EF87E8;
+    border-bottom: solid 4px #9f6b38;
     width: 40%;
     margin-left: 0;
 }
@@ -146,7 +146,7 @@ hr {
 .decoration {
     width: 280px;
     height: 140px;
-    background: linear-gradient(135deg, #cc33c2, #EF87E8 10%, #fff6c7 90%);
+    background: linear-gradient(135deg, #9b6236, #ffffad);
     border-radius: 70px 0px 0px 70px;
     position: absolute;
     right: 0;
@@ -183,7 +183,7 @@ hr {
 .bar {
     width: 150px;
     height: 13px;
-    border: solid 2px #db57d2;
+    border: solid 2px #9f6b38;
     border-radius: 5px;
     margin-left: 20px;
 }
@@ -191,7 +191,7 @@ hr {
 .value {
     height: 100%;
     width: 60%;
-    background-color: #db57d2;
+    background-color: #9f6b38;
 }
 
 .value.p10 {
@@ -271,15 +271,11 @@ hr {
 /*a:hover 需放置在 a:link 跟 a:visited 之後，則 a:active 放置在 a:hover 之後*/
 .listWorks a:visited,
 #myGitHub:visited {
-    /*    color: #db70d4;*/
-    /*    color: #ccc;*/
     color: #a3a3a3;
 }
 
 .listWorks a:hover,
 #myGitHub:hover {
-    /*    color: #cc33c2;*/
-    /*    color: #a3a3a3;*/
     color: #8d8d8d;
 }
 
@@ -305,27 +301,27 @@ li.year > ul {
 }
 
 li.year:nth-child(1) ul {
-    border-color: #db57d2
+    border-color: hsl(30, 48%, 42%)
 }
 
 li.year:nth-child(2) ul {
-    border-color: #e06cd8
+    border-color: #b1783e
 }
 
 li.year:nth-child(3) ul {
-    border-color: #e481de
+    border-color: #bf854a
 }
 
 li.year:nth-child(4) ul {
-    border-color: #e996e3
+    border-color: #c6915d
 }
 
 li.year:nth-child(5) ul {
-    border-color: #edabe9
+    border-color: #cd9e70
 }
 
 li.year:nth-child(6) ul {
-    border-color: #f2c0ee
+    border-color: #d3ab82
 }
 
 .italic {

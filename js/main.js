@@ -12,12 +12,17 @@ let valC = document.getElementsByClassName("value");
 let worksC = document.querySelectorAll(".listWorks a");
 let eduYearC = document.querySelectorAll(".listEducation li.year ul");
 let workYearC = document.querySelectorAll(".listExperience li.year ul");
-let lightness = 60;
+
+let lightBackgroundColor = "#fffcee";
+let lightBarColor = "#9f6b38";
+let blackBackgroundColor = "#1d2d62";
+let blackBarColor = "#ff7066";
+let lightness;
 let baseColor;
 
 function changeTheme() {
     if (nextTheme == "light") {
-        document.body.style.backgroundColor = "#fffcee";
+        document.body.style.backgroundColor = lightBackgroundColor;
         document.body.style.color = "rgba(0, 0, 0, 0.95)";
         sliderBtn.removeAttribute("class");
         sliderBtn.setAttribute("class", "slider round light");
@@ -27,33 +32,33 @@ function changeTheme() {
             worksC[i].removeAttribute("class");
             worksC[i].setAttribute("class", "light");
         }
-        hrC[0].style.borderBottom = "solid 4px #EF87E8";
-        decC[0].style.background = "linear-gradient(135deg, #cc33c2, #EF87E8 10%, #fff6c7 90%)";
+        hrC[0].style.borderBottom = "solid 4px " + lightBarColor;
+        decC[0].style.background = "linear-gradient(135deg, #9b6236, #ffffad)";
         for (let i = 0; i < head2C.length; i++) {
             head2C[i].removeAttribute("class");
             head2C[i].setAttribute("class", "light");
         }
         for (let i = 0; i < barC.length; i++) {
-            barC[i].style.border = "solid 2px #db57d2";
-            valC[i].style.backgroundColor = "#db57d2";
+            barC[i].style.border = "solid 2px " + lightBarColor;
+            valC[i].style.backgroundColor = lightBarColor;
         }
-        lightness = 60;
-        baseColor = "hsl(304, 65%, " + lightness + "%)";
+        lightness = 42;
+        baseColor = "hsl(30, 48%, " + lightness + "%)";
         for (let j = 0; j < eduYearC.length; j++) {
             eduYearC[j].style.borderColor = baseColor;
             lightness += 5;
-            baseColor = "hsl(304, 65%, " + lightness + "%)";
+            baseColor = "hsl(30, 48%, " + lightness + "%)";
         }
-        lightness = 60;
-        baseColor = "hsl(304, 65%, " + lightness + "%)";
+        lightness = 42;
+        baseColor = "hsl(30, 48%, " + lightness + "%)";
         for (let k = 0; k < workYearC.length; k++) {
             workYearC[k].style.borderColor = baseColor;
             lightness += 5;
-            baseColor = "hsl(304, 65%, " + lightness + "%)";
+            baseColor = "hsl(30, 48%, " + lightness + "%)";
         }
         nextTheme = "black";
     } else if (nextTheme == "black") {
-        document.body.style.backgroundColor = "#1d2d62";
+        document.body.style.backgroundColor = blackBackgroundColor;
         document.body.style.color = "rgba(255, 255, 255, 0.95)";
         sliderBtn.removeAttribute("class");
         sliderBtn.setAttribute("class", "slider round black");
@@ -64,15 +69,15 @@ function changeTheme() {
             worksC[i].setAttribute("class", "black");
         }
         hrC[0].style.borderBottom = "solid 4px #FF7168";
-        decC[0].style.background = "linear-gradient(135deg, #FF5F5F, #FFFFAE)";
+        decC[0].style.background = "linear-gradient(135deg, #ff6161, #ffffad)";
         for (let i = 0; i < head2C.length; i++) {
             head2C[i].removeAttribute("class");
             head2C[i].setAttribute("class", "black");
         }
 
         for (let i = 0; i < barC.length; i++) {
-            barC[i].style.border = "solid 2px #FF7168";
-            valC[i].style.backgroundColor = "#FF7168";
+            barC[i].style.border = "solid 2px " + blackBarColor;
+            valC[i].style.backgroundColor = blackBarColor;
         }
         lightness = 70;
         baseColor = "hsl(4, 100%, " + lightness + "%)";
