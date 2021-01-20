@@ -1,17 +1,90 @@
 * {
     /*   border: solid 1px black; */
+    box-sizing: border-box;
 }
 
+/******************** Switch button ********************/
+/* The switch - the box around the slider */
+.switch {
+    margin-bottom: 10px;
+    position: relative;
+    top: -20px;
+    right: -45%;
+    display: block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background-color: #1d2d62;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    /*    background-color: #ccc;*/
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider.light:before {
+    background-color: #fffcee;
+}
+
+.slider.black:before {
+    background-color: #1d2d62;
+}
+
+input:checked + .slider {
+    background-color: #fffcee;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #fffcee;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/********************** Main Page **********************/
 body {
     padding: 50px;
+    /*    min-width: 750px;*/
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    background-color: #1d2d62;
-    color: rgba(255, 255, 255, 0.95);
+    align-items: center;
+    background-color: #fffcee;
+    color: rgba(0, 0, 0, 0.95);
     font-size: 15px;
     line-height: 28px;
     letter-spacing: 1px;
-    font-family: "微軟正黑體", sans-serif;
+    font-family: sans-serif;
 }
 
 /* 複寫區 */
@@ -32,8 +105,15 @@ h2::after {
     display: inline-block;
     width: 20px;
     height: 8px;
-    background-color: #FF7168;
     margin-left: 10px;
+}
+
+h2.light::after {
+    background-color: #db57d2;
+}
+
+h2.black::after {
+    background-color: #FF7168;
 }
 
 h3 {
@@ -50,29 +130,31 @@ h4 {
 
 hr {
     border: none;
-    border-bottom: solid 4px #FF7168;
+    border-bottom: solid 4px #EF87E8;
     width: 40%;
     margin-left: 0;
 }
 
 .container {
-    width: 950px;
-    min-width: 650px;
-    border: solid 8px white;
+    /*    width: 950px;*/
+    /*    min-width: 650px;*/
+    border: solid 8px rgba(167, 167, 167, 0.95);
     padding: 50px;
     position: relative;
 }
 
 .decoration {
-    width: 300px;
+    width: 280px;
     height: 140px;
-    background: linear-gradient(135deg, #FF5F5F, #FFFFAE);
+    background: linear-gradient(135deg, #cc33c2, #EF87E8 10%, #fff6c7 90%);
     border-radius: 70px 0px 0px 70px;
     position: absolute;
     right: 0;
     top: 50px;
 }
 
+/******************** Switch button ********************/
+/*********************** Skills ************************/
 .block .skill {
     display: flex;
     justify-content: space-around
@@ -100,8 +182,8 @@ hr {
 /* list skills */
 .bar {
     width: 150px;
-    height: 10px;
-    border: solid 2px #FF7168;
+    height: 13px;
+    border: solid 2px #db57d2;
     border-radius: 5px;
     margin-left: 20px;
 }
@@ -109,7 +191,7 @@ hr {
 .value {
     height: 100%;
     width: 60%;
-    background-color: #FF7168;
+    background-color: #db57d2;
 }
 
 .value.p10 {
@@ -152,11 +234,9 @@ hr {
     width: 100%;
 }
 
-/*
-.listWorks {
-    margin-bottom: 20px;
-}
-*/
+/********************* Works Demo **********************/
+/********************** Education **********************/
+/************** Work/Academic Experience ***************/
 .listWorks,
 .listEducation,
 .listExperience {
@@ -172,8 +252,18 @@ hr {
     margin: 3px 15px;
 }
 
-.listWorks a,
-#myGitHub {
+.listWorks li .short {
+    display: none;
+}
+
+.listWorks a.light,
+#myGitHub.light {
+    color: rgba(0, 0, 0, 0.95);
+    text-decoration: none;
+}
+
+.listWorks a.black,
+#myGitHub.black {
     color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
 }
@@ -181,14 +271,20 @@ hr {
 /*a:hover 需放置在 a:link 跟 a:visited 之後，則 a:active 放置在 a:hover 之後*/
 .listWorks a:visited,
 #myGitHub:visited {
-    color: #ffb8b3;
+    /*    color: #db70d4;*/
+    /*    color: #ccc;*/
+    color: #a3a3a3;
 }
 
 .listWorks a:hover,
 #myGitHub:hover {
-    color: #FF7168;
+    /*    color: #cc33c2;*/
+    /*    color: #a3a3a3;*/
+    color: #8d8d8d;
 }
 
+/********************** Education **********************/
+/************** Work/Academic Experience ***************/
 li.year {
     display: flex;
     margin-bottom: 15px;
@@ -209,30 +305,142 @@ li.year > ul {
 }
 
 li.year:nth-child(1) ul {
-    border-color: #FF7168
+    border-color: #db57d2
 }
 
 li.year:nth-child(2) ul {
-    border-color: #ff8880
+    border-color: #e06cd8
 }
 
 li.year:nth-child(3) ul {
-    border-color: #ffa099
+    border-color: #e481de
 }
 
 li.year:nth-child(4) ul {
-    border-color: #ffb8b3
+    border-color: #e996e3
 }
 
 li.year:nth-child(5) ul {
-    border-color: #ffcfcc
+    border-color: #edabe9
 }
 
 li.year:nth-child(6) ul {
-    border-color: #ffe7e5
+    border-color: #f2c0ee
 }
 
 .italic {
     font-style: italic;
 
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .container {
+        padding-right: 30px;
+    }
+
+    .decoration {
+        width: 240px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .container {
+        padding: 40px;
+    }
+
+    .decoration {
+        width: 180px;
+        height: 100px;
+    }
+
+    .block .skill ul {
+        width: 60%;
+    }
+
+    .bar {
+        width: 180px;
+        height: 14px;
+        border-radius: 6px;
+    }
+
+    .block .skill {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        padding: 20px;
+    }
+
+    .switch {
+        top: -10px;
+    }
+
+    .container {
+        padding: 30px;
+    }
+
+    .decoration {
+        width: 130px;
+        height: 100px;
+    }
+
+    .block .skill {
+        display: block;
+        width: 90%;
+        margin-left: 15%;
+        /*    justify-content: space-around*/
+    }
+
+    .block .skill ul {
+        width: 80%;
+    }
+
+    .bar {
+        min-width: 150px;
+        height: 13px;
+        border-radius: 6px;
+    }
+
+    .listWorks li .short {
+        display: inline;
+    }
+
+    .listWorks li .long {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 585px) {
+    body {
+        padding: 10px;
+    }
+
+    .switch {
+        top: -5px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .decoration {
+        display: none;
+    }
+
+    .bar {
+        width: 100px;
+        height: 13px;
+        border-radius: 6px;
+    }
 }
