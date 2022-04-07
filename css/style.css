@@ -320,10 +320,6 @@ li.year:nth-child(5) ul {
     border-color: #cd9e70
 }
 
-li.year:nth-child(6) ul {
-    border-color: #d3ab82
-}
-
 .italic {
     font-style: italic;
 
